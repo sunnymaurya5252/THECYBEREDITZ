@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Timeline</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00ffcc;
+            --primary-light: rgba(0, 255, 204, 0.1);
+            --bg: #0a0e17;
+            --card-bg: #111827;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent: #1f2937;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            position: relative;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #fff, var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 31px;
+            width: 2px;
+            height: 100%;
+            background: var(--accent);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 80px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 64px;
+            height: 64px;
+            background: var(--card-bg);
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.5rem;
+            box-shadow: 0 0 15px var(--primary-light);
+            z-index: 1;
+        }
+
+        .timeline-card {
+            background: var(--card-bg);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .degree {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .institution {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .location {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            .timeline::before {
+                left: 0;
+                transform: translateX(31px);
+            }
+            
+            .timeline-item {
+                padding-left: 0;
+                padding-top: 80px;
+            }
+            
+            .timeline-icon {
+                left: 50%;
+                transform: translateX(-31px);
+            }
+
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="section-title">Academic Journey</h2>
+
+        <div class="timeline">
+            <!-- Undergraduate -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-header">
+                        <div>
+                            <div class="degree">B.Tech in Computer Science & Engineering</div>
+                            <div class="institution">Specialization in Cyber Security</div>
+                        </div>
+                        <div class="location"><i class="fa-solid fa-location-dot"></i> Nagpur, MH</div>
+                    </div>
+                    <p class="description">Currently pursuing undergraduate studies, building a strong foundation in core computing principles while delving into specialized domains like network security, cryptography, and threat analysis. Focused on developing technical skills to help safeguard digital infrastructures.</p>
+                </div>
+            </div>
+
+            <!-- Senior Secondary -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-header">
+                        <div>
+                            <div class="degree">Senior Secondary Education</div>
+                            <div class="institution">Sher Shah College Sasaram</div>
+                        </div>
+                        <div class="location"><i class="fa-solid fa-location-dot"></i> Sasaram, Bihar</div>
+                    </div>
+                    <p class="description">Completed higher secondary education, building a foundational academic background in Physics, Chemistry, and Mathematics that shaped early learning and prepared for advanced academic pursuits.</p>
+                </div>
+            </div>
+
+            <!-- Secondary -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+                <div class="timeline-card">
+                    <div class="card-header">
+                        <div>
+                            <div class="degree">Secondary Education</div>
+                            <div class="institution">Paradise Children Academy</div>
+                        </div>
+                        <div class="location"><i class="fa-solid fa-location-dot"></i> Kaimur, Bihar</div>
+                    </div>
+                    <p class="description">Completed foundational schooling, providing a broad academic background in English, Sanskrit, Science, Social Science, Computer, and Mathematics.</p>
+                </div>
+            </div>
+        </div>
+<footer style="margin-left:300px;">
+            &copy; 2026 Sunny Kumar. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>

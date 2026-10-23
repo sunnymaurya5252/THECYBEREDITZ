@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience - The Cyber Editor</title>
+  <style>
+    :root {
+      --bg-color: #0a0f1d;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.2);
+      --cyan-neon: #00f3ff;
+      --text-white: #f0f4f8;
+      --text-muted: #a0aec0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(0, 243, 255, 0.15), transparent 70%),
+        radial-gradient(circle at 80% 80%, rgba(0, 100, 255, 0.1), transparent 50%);
+      color: var(--text-white);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .header-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--cyan-neon);
+      box-shadow: 0 0 15px rgba(0, 243, 255, 0.6), inset 0 0 10px rgba(0, 243, 255, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .page-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--cyan-neon);
+      text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+      letter-spacing: 2px;
+    }
+
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      margin-bottom: 24px;
+      width: 100%;
+    }
+
+    .section-heading {
+      color: var(--cyan-neon);
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+      padding-bottom: 8px;
+    }
+
+    .content-text {
+      color: var(--text-white);
+      line-height: 1.6;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .content-text strong {
+      color: #ffffff;
+    }
+
+    .skills-list {
+      list-style-type: none;
+      padding-left: 12px;
+    }
+
+    .skills-list li {
+      color: var(--text-white);
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .skills-list li::before {
+      content: "•";
+      color: var(--cyan-neon);
+      position: absolute;
+      left: -12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="page-header">
+      <div class="header-icon">🛡️</div>
+      <h1 class="page-title">EXPERIENCE</h1>
+    </div>
+
+    <div class="glass-card">
+      <h2 class="section-heading">Senior Cybersecurity and Video Engineer</h2>
+      <p class="content-text">
+        I'm pursuing a B.Tech in Computer Science and Engineering with a specialization in <strong>Cyber Security</strong> at <strong>Tulsiramji Gaikwad-Patil College of Engineering and Technology in Nagpur</strong>.
+      </p>
+      <p class="content-text">
+        I have a strong background in Physics, Chemistry, and Mathematics from Bihar, and I am also passionate about video editing. I run a YouTube channel called <strong>The Cyber Editz</strong>, and I enjoy coding in C and C++, web design with HTML, VS Code, and CSS, playing games like BGMI, Minecraft, and God of War, and listening to Hindi songs and poetry.
+      </p>
+    </div>
+
+    <div class="glass-card">
+      <h2 class="section-heading">Cyber Security and Protection</h2>
+      <p class="content-text">
+        Implementing robust security strategies to safeguard digital infrastructure and data from cyber threats, malware, and unauthorized access.
+      </p>
+      <ul class="skills-list">
+        <li>Utilizing encryption and firewalls for data security.</li>
+        <li>Continuous monitoring of network traffic and threat detection.</li>
+      </ul>
+    </div>
+<footer>
+            &copy; 2026 Sunny Kumar. All rights reserved.
+        </footer>
+
+  </div>
+
+</body>
+</html>
